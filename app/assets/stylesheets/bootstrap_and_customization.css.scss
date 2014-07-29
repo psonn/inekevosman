@@ -1,11 +1,22 @@
-$body-bg: #ecf0f1;
-$navbar-inverse-bg: #ffffff;
-$navbar-inverse-link-color: #8A0505;
-$brand-primary: #8A0505;
-$jumbotron-bg: #ffffff;
+@import url("http://fonts.googleapis.com/css?family=Oxygen:400,700,300");
+
+$body-bg:                    #ecf0f1;
+$font-family-sans-serif:     'Oxygen', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:              45px;
+$navbar-default-bg:          white;
+$navbar-default-brand-color: #c0392b;
+$brand-primary:              #c0392b;
+$jumbotron-bg:               white;
+
 @import 'bootstrap';
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:200,300");
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
 
 body {
 	background: url('ineke.jpg') no-repeat top center fixed;
@@ -14,7 +25,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
   	background-color:#333;
-  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
 }
 
 /* footer */
