@@ -1,0 +1,49 @@
+$body-bg: #ecf0f1;
+$navbar-inverse-bg: #ffffff;
+$navbar-inverse-link-color: #8A0505;
+$brand-primary: #8A0505;
+$jumbotron-bg: #ffffff;
+@import 'bootstrap';
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:200,300");
+
+body {
+	background: url('ineke.jpg') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	background-color:#333;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+
+/* footer */
+
+footer {
+  margin: 20px auto;
+  padding-top: 5px;
+  border-top: 1px solid #E6E6E6;
+  color: #E6E6E6;
+}
+
+footer a {
+  color: #E6E6E6;
+}  
+
+footer a:hover { 
+  color: #E6E6E6;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
