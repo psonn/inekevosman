@@ -77,4 +77,9 @@ Ineke5::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Required for Heroku.
+  # Remember to set this to actual host.
+  config.action_mailer.default_url_options = { :host => 'inekevosman.herokuapp.com' }
+  # Rails.application.routes.default_url_options[:host] = 'doamer.com'
 end
