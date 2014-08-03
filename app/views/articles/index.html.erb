@@ -1,9 +1,7 @@
 <% provide(:title, 'Artikelen') %>
 
 <div class="panel panel-default">
-  <% if @articles.any? %>
   <div class="panel-heading"><h1>Artikelen (<%= @articles.count %>)</h1></div>
-  <% end %>
   <div class="panel-body">
     <%= link_to("Nieuw artikel", [:new, :article], :class => 'btn btn-primary') %>
   </div>
