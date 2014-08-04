@@ -16,5 +16,5 @@
 /tmp
 /public/uploads/*
 .DS_Store
-/config/initializers/carrierwave.rb
+/config/initializers/app_environment_variables.rb
 .env
