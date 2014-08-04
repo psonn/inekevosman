@@ -17,6 +17,8 @@
 	  <strong>Inhoud:</strong>
 	  <%= @article.body %>
 	</p>
+
+	<p>Door <strong><%= @article.user.username if @article.user %></strong></p>
   </div>  
   <div class="panel-footer">
     <% if @article.user == current_user %>
