@@ -10,8 +10,7 @@
   	<p id="notice"><%= notice %></p>
 
 	<p>
-	  <strong>Titel:</strong>
-	  <%= @article.title %>
+	<%= image_tag @article.image_url(:medium).to_s %>
 	</p>
 
 	<p>

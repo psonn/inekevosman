@@ -10,6 +10,7 @@
 <table class="table table-hover">
   <thead>
   <tr>
+    <th>Afbeelding</th>
     <th>Titel</th>
     <th>Inhoud</th>
     <th>Auteur</th>
@@ -19,6 +20,7 @@
   <% @articles.each do |article| %>
   <tbody>
     <tr>
+      <td><%= image_tag article.image.url(:thumb) %></td>
       <td><%= article.title %></td>
       <td><%= article.body %></td>
       <td><%= article.user.email if article.user %></td>

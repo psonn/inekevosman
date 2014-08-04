@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.article.build(article_params)
+    @article = current_user.articles.build(article_params)
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
     else
@@ -52,6 +52,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :image, :remote_image_url, :image_cache)
     end
 end

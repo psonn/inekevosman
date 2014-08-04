@@ -21,6 +21,10 @@ gem 'bootstrap-sass'
 # Devise for authentication
 gem 'devise'
 
+# Carrierwave for file/image uploads
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
