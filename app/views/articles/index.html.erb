@@ -55,5 +55,9 @@
   </tbody>
   <% end %>
   </table>
-  <div class="panel-footer"></div>
+  <div class="panel-footer">
+    <div class="center">
+      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div>
 </div>
