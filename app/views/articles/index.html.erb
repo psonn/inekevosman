@@ -23,7 +23,7 @@
       <td><%= image_tag article.image.url(:thumb) %></td>
       <td><%= article.title %></td>
       <td><%= article.body %></td>
-      <td><%= article.user.email if article.user %></td>
+      <td><%= article.user.username if article.user %></td>
       <td>
         <div class="btn-group">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
