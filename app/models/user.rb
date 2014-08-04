@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
   validates :first_name, :last_name, :username, :email, :presence => { :message => "Mag niet leeg zijn." }
   validates :username, uniqueness: { case_sensitive: false, message: "Is al in gebruik." }
