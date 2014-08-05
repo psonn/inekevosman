@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
@@ -44,11 +43,6 @@ class ArticlesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.friendly.find(params[:id])
-    end
-
-    def correct_user
-      @article = current_user.articles.find_by(id: params[:id])
-      redirect_to articles_path, notice: "Not authorized to edit this article" if @article.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
