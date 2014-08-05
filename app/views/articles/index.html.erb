@@ -12,7 +12,6 @@
   <tr>
     <th>Afbeelding</th>
     <th>Titel</th>
-    <th>Inhoud</th>
     <th>Auteur</th>
     <th></th>
   </tr>
@@ -22,7 +21,6 @@
     <tr>
       <td><%= image_tag article.image.url(:thumb) %></td>
       <td><%= article.title %></td>
-      <td><%= (article.body).html_safe  %></td>
       <td><%= article.user.username if article.user %></td>
       <td>
         <div class="btn-group">
