@@ -24,5 +24,8 @@ module Ineke5
     config.assets.initialize_on_precompile = false
 
     config.exceptions_app = self.routes
+
+    # Autoload CKeditor.
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

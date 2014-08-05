@@ -31,6 +31,8 @@ gem 'will_paginate-bootstrap'
 
 gem 'newrelic_rpm'
 
+gem 'ckeditor'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

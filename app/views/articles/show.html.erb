@@ -15,8 +15,7 @@
 	<p>Door <strong><%= @article.user.username if @article.user %></strong></p>
 
 	<p>
-	  <strong>Inhoud:</strong>
-	  <%= @article.body %>
+	  <%= (@article.body).html_safe %>
 	</p>
 
   </div>  

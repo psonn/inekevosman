@@ -1,4 +1,5 @@
 Ineke5::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :articles
 
   devise_for :users
