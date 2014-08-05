@@ -24,6 +24,7 @@ gem 'devise'
 # Carrierwave for file/image uploads
 gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
+gem 'mini_magick'
 gem "fog", "~> 1.3.1"
 
 gem 'will_paginate', '~> 3.0.5'
