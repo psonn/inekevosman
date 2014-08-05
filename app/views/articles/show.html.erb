@@ -9,7 +9,7 @@
   <div class="panel-body">
 
 	<p>
-	<%= image_tag @article.image_url(:medium).to_s %>
+	<%= image_tag @article.image_url(:medium).to_s, class: "img-responsive" %>
 	</p>
 
 	<p>Door <strong><%= @article.user.username if @article.user %></strong></p>
