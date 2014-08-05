@@ -26,7 +26,11 @@
                 <span class="glyphicon glyphicon-user"></span> Accountinstellingen
               <% end %>
             </li> 
-            <li><a href="#">Alle gebruikers</a></li>
+            <li>
+              <%= link_to users_path do %>
+                Gebruikersoverzicht
+              <% end %>
+            </li> 
             <li class="divider"></li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
