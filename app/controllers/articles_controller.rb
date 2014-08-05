@@ -5,19 +5,17 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
-    render :layout => 'custom'
   end
 
   def show
+    render :layout => 'custom'
   end
 
   def new
     @article = current_user.articles.build
-    render :layout => 'custom'
   end
 
   def edit
-    render :layout => 'custom'
   end
 
   def create
