@@ -19,3 +19,4 @@
 /config/initializers/app_environment_variables.rb
 .env
 Procfile
+/public/system/*

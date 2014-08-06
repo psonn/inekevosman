@@ -1,4 +1,4 @@
-<nav class="navbar navbar-static-top navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -16,8 +16,18 @@
     <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Articles", articles_path %></li>
+        <li><%= link_to "Artikelen", overview_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
         <% if user_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beheer<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to "Artikeloverzicht", articles_path %></li>
+              <li><%= link_to 'Paginabeheer', '#' %></li>
+              <li><%= link_to 'Homepagina', '#' %></li>
+              <li><%= link_to 'Contactpagina', '#' %></li>
+            </ul>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %> <%= current_user.last_name %><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

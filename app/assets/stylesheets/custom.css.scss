@@ -19,24 +19,30 @@ $jumbotron-bg:               white;
 }
 
 body {
-    height: 100%;
+    background: url('ineke.jpg') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#333;
 }
 
 /* footer */
 
 footer {
-  margin: 45px auto;
+  margin: 20px auto;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
+  border-top: 1px solid #E6E6E6;
+  color: #E6E6E6;
+  height: 4em;
 }
 
 footer a {
-  color: #555;
+  color: #E6E6E6;
 }  
 
 footer a:hover { 
-  color: #222;
+  color: #E6E6E6;
 }
 
 footer small {
@@ -53,15 +59,71 @@ footer ul li {
   margin-left: 10px;
 }
 
-/* Checkbox design */
-.checkbox {
-  margin-left: 1.5em;
-}
-
-.checkbox label {
-  padding-left: 0px;
-}
 
 #sidebar {
   background: white;
+}
+
+
+/* Contact form */
+
+.hidden { 
+  display: none; 
+}
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+/* Boxes for overview */
+
+#articles {
+  margin: 0 auto;
+}
+
+.box {
+ background-color: white;
+ margin:5px;
+ padding:5px;
+ line-height: 1.4em;
+ float: left;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+ box-shadow: 1px 1px 10px #444;
+ width: 250px;
+}
+
+.box img {
+ display: block;
+ width: 100%;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
 }

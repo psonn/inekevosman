@@ -1,4 +1,6 @@
 Ineke5::Application.routes.draw do
+  get 'work/index'
+
   get 'contacts/new'
 
   get 'contacts/create'
@@ -21,8 +23,10 @@ Ineke5::Application.routes.draw do
   get "/422" => "errors#unacceptable"
   get "/500" => "errors#internal_error"
 
-  get 'contacts' => 'contacts#new'
+  get 'contact' => 'contacts#new'
   resources "contacts", only: [:new, :create]
+
+  get 'overview' => 'articles#overview'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

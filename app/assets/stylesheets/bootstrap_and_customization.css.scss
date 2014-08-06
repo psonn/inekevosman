@@ -19,31 +19,34 @@ $jumbotron-bg:               white;
 }
 
 body {
-	  background: url('ineke.jpg') no-repeat top center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  	background-color:#333;
     height: 100%;
+}
+
+.radio,
+.checkbox {
+  margin-left: 20px;
+}
+
+.radio label,
+.checkbox label {
+  padding-left: 0px;
 }
 
 /* footer */
 
 footer {
-  margin: 20px auto;
+  margin: 45px auto;
   padding-top: 5px;
-  border-top: 1px solid #E6E6E6;
-  color: #E6E6E6;
-  height: 4em;
+  border-top: 1px solid #eaeaea;
+  color: #999;
 }
 
 footer a {
-  color: #E6E6E6;
+  color: #555;
 }  
 
 footer a:hover { 
-  color: #E6E6E6;
+  color: #222;
 }
 
 footer small {
@@ -60,71 +63,6 @@ footer ul li {
   margin-left: 10px;
 }
 
-html {
-height: 100%;
-}
-.container {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -4em;
-}
-.push {
-height: -4em;
-}
-
-/* Checkbox design */
-.checkbox {
-  margin-left: 1.5em;
-}
-
-.checkbox label {
-  padding-left: 0px;
-}
-
 #sidebar {
   background: white;
-}
-
-/* Responsive header */
-
-h1 {
-    font-size: 63px;
-    font-size: 7vw;
-}
-
-/* Contact form */
-
-.hidden { 
-  display: none; 
-}
-
-/*flash*/
-
-.alert-error {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
-}
-
-.alert-alert {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
-}
-
-.alert-success {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
-}
-
-.alert-notice {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
 }

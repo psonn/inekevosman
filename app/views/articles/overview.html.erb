@@ -1,0 +1,31 @@
+<% provide(:title, 'Artikelen') %>
+
+<div class="jumbotron center">
+	<h1>
+		Our work
+	</h1>
+	<p>
+		Below, you will find a selection of our work. For more information, click on the link to visit the dedicated page. Once you're there, feel free to let us know what you think by placing a comment. Alternatively, send us a message through the <%= link_to 'contact form', contact_path %>.
+	</p>
+</div>
+
+<div id="articles" class="transitions-enabled">
+  <% @articles.each do |article| %>
+    <div class="box panel panel-default">
+        <!--div class="panel-heading"-->
+            <h2><%= article.title %></h2>
+        <!--/div-->
+        <%= image_tag article.image_url(:medium).to_s, class: "img-responsive" %>
+        <div class="panel-body">
+            <%= article.summary %><br>
+        </div>
+        <div class="panel-footer">
+            <%= link_to 'Lees meer', article_path(article) %> 
+            <% if user_signed_in? %>
+             | <%= link_to 'Bewerk', edit_article_path(article) %> | 
+              <%= link_to 'Verwijder', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </div>
+    </div>
+  <% end %>
+</div>

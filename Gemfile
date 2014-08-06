@@ -40,6 +40,8 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'bootstrap_form'
 
+gem 'masonry-rails', '~> 0.2.1'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -54,6 +56,7 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
