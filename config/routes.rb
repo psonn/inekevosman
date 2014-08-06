@@ -1,4 +1,8 @@
 Ineke5::Application.routes.draw do
+  get 'contacts/new'
+
+  get 'contacts/create'
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :articles
 
@@ -16,6 +20,9 @@ Ineke5::Application.routes.draw do
   get "/404" => "errors#not_found"
   get "/422" => "errors#unacceptable"
   get "/500" => "errors#internal_error"
+
+  get 'contacts' => 'contacts#new'
+  resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
