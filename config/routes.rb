@@ -5,6 +5,8 @@ Ineke5::Application.routes.draw do
 
   get 'contacts/create'
 
+  get 'paginas' => 'blogs#index'
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :articles
 
@@ -27,6 +29,9 @@ Ineke5::Application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   get 'overview' => 'articles#overview'
+
+  resources :blogs , :path => '', :only => [:show, :update, :destroy]
+  resources :blogs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

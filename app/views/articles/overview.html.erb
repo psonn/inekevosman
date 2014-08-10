@@ -15,7 +15,9 @@
         <!--div class="panel-heading"-->
             <h2><%= article.title %></h2>
         <!--/div-->
-        <%= image_tag article.image_url(:medium).to_s, class: "img-responsive" %>
+        <%= link_to article_path(article) do %>
+          <%= image_tag article.image_url(:medium).to_s, class: "img-responsive" %>
+        <% end %>
         <div class="panel-body">
             <%= article.summary %><br>
         </div>

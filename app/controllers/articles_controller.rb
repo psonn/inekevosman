@@ -41,10 +41,6 @@ class ArticlesController < ApplicationController
 
   def overview
     @articles = Article.all.order("created_at DESC")#.paginate(:page => params[:page], :per_page => 4)
-#    @comment = Comment.new
-#    @support = Support.new(:id => 1)
-#    @contactpagina = Contactpagina.find(1)
-#    @homepage = Homepage.find(1)
     render :layout => 'articles'
   end
 
@@ -56,6 +52,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :image, :remote_image_url, :image_cache, :summary)
+      params.require(:article).permit(:title, :body, :image, :remote_image_url, :image_cache, :summary, :slug)
     end
 end

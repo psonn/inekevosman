@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles, dependent: :destroy
+  has_many :blogs, dependent: :destroy
 
   validates :first_name, :last_name, :username, :email, :presence => { :message => "Mag niet leeg zijn." }
   validates :username, uniqueness: { case_sensitive: false, message: "Is al in gebruik." }
