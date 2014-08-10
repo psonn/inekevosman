@@ -12,7 +12,6 @@ Ineke5::Application.routes.draw do
 
   devise_for :users
   root "pages#home"
-  get "about" => "pages#about"
 
   devise_scope :user do
     get "sign_in", to: "devise/sessions#new"
