@@ -13,7 +13,7 @@
   <% @articles.each do |article| %>
     <div class="box panel panel-default">
         <div class="panel-heading">
-            <h2><%= article.title %></h2>
+            <h2><%= wrap(article.title) %></h2>
         </div>
         <%= link_to article_path(article) do %>
           <%= image_tag article.image_url(:medium).to_s, class: "img-responsive" %>

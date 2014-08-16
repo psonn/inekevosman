@@ -3,7 +3,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">
-      <h1><%= @article.title %></h1>
+      <h1><%= wrap(@article.title) %></h1>
     </div>
   </div>
   <div class="panel-body">
@@ -12,10 +12,10 @@
 	<%= image_tag @article.image_url(:medium).to_s, class: "img-responsive" %>
 	</p>
 
-	<p>Door <strong><%= @article.user.username if @article.user %></strong></p>
+	<p>Door <strong><%= @article.user.username if @article.user %></strong>, <%=  %></p>
 
 	<p>
-	  <%= (@article.body).html_safe %>
+	  <%= wrap((@article.body).html_safe) %>
 	</p>
 
   </div>  
