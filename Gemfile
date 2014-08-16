@@ -29,6 +29,7 @@ gem "fog", "~> 1.3.1"
 
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
+gem 'pageless-rails', github: 'rorlab/pageless-rails'
 
 gem 'newrelic_rpm'
 
