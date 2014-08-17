@@ -1,64 +1,41 @@
 class ContactpaginasController < ApplicationController
   before_action :set_contactpagina, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
-  # GET /contactpaginas
-  # GET /contactpaginas.json
   def index
     @contactpaginas = Contactpagina.all
   end
 
-  # GET /contactpaginas/1
-  # GET /contactpaginas/1.json
   def show
   end
 
-  # GET /contactpaginas/new
   def new
     @contactpagina = Contactpagina.new
   end
 
-  # GET /contactpaginas/1/edit
   def edit
   end
 
-  # POST /contactpaginas
-  # POST /contactpaginas.json
   def create
     @contactpagina = Contactpagina.new(contactpagina_params)
-
-    respond_to do |format|
       if @contactpagina.save
-        format.html { redirect_to @contactpagina, notice: 'Contactpagina was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @contactpagina }
+        redirect_to @contactpagina, notice: 'Contactpagina was successfully created.' 
       else
-        format.html { render action: 'new' }
-        format.json { render json: @contactpagina.errors, status: :unprocessable_entity }
+        render action: 'new' 
       end
-    end
   end
 
-  # PATCH/PUT /contactpaginas/1
-  # PATCH/PUT /contactpaginas/1.json
   def update
-    respond_to do |format|
       if @contactpagina.update(contactpagina_params)
-        format.html { redirect_to @contactpagina, notice: 'Contactpagina was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to @contactpagina, notice: 'Contactpagina was successfully updated.'
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @contactpagina.errors, status: :unprocessable_entity }
+        render action: 'edit' 
       end
-    end
   end
 
-  # DELETE /contactpaginas/1
-  # DELETE /contactpaginas/1.json
   def destroy
     @contactpagina.destroy
-    respond_to do |format|
-      format.html { redirect_to contactpaginas_url }
-      format.json { head :no_content }
-    end
+    redirect_to contactpaginas_url
   end
 
   private

@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   def new
+    @contactpaginas = Contactpagina.find(1)
     @contact = Contact.new
     render :layout => 'custom'
   end

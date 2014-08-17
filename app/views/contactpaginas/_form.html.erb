@@ -1,12 +1,28 @@
-<%= simple_form_for(@contactpagina) do |f| %>
-  <%= f.error_notification %>
+<%= form_for @contactpagina, html: { multipart: true } do |f| %>
+  <% if @contactpagina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contactpagina.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :body %>
+      <ul>
+      <% @contactpagina.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control", autofocus: true %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+
+  <div class="form-group">
+    <%= f.label :body %><br>
+    <%= f.cktext_area :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

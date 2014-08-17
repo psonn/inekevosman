@@ -1,64 +1,41 @@
 class HomesController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
-  # GET /homes
-  # GET /homes.json
   def index
     @homes = Home.all
   end
 
-  # GET /homes/1
-  # GET /homes/1.json
   def show
   end
 
-  # GET /homes/new
   def new
     @home = Home.new
   end
 
-  # GET /homes/1/edit
   def edit
   end
 
-  # POST /homes
-  # POST /homes.json
   def create
     @home = Home.new(home_params)
-
-    respond_to do |format|
       if @home.save
-        format.html { redirect_to @home, notice: 'Home was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @home }
+        redirect_to @home, notice: 'Home was successfully created.'
       else
-        format.html { render action: 'new' }
-        format.json { render json: @home.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
-    end
   end
 
-  # PATCH/PUT /homes/1
-  # PATCH/PUT /homes/1.json
   def update
-    respond_to do |format|
       if @home.update(home_params)
-        format.html { redirect_to @home, notice: 'Home was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to @home, notice: 'Home was successfully updated.' 
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @home.errors, status: :unprocessable_entity }
+        render action: 'edit' 
       end
-    end
   end
 
-  # DELETE /homes/1
-  # DELETE /homes/1.json
   def destroy
     @home.destroy
-    respond_to do |format|
-      format.html { redirect_to homes_url }
-      format.json { head :no_content }
-    end
+      redirect_to homes_url 
   end
 
   private
