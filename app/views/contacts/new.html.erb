@@ -1,8 +1,12 @@
 <% provide(:title, 'Contact') %>
 
-<div class="jumbotron center">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
 <h1>Contact</h1>
-
+    </div>
+  </div>
+  <div class="panel-body">
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
 <div class="form-group">
     <%= f.label :name %><br>
@@ -24,4 +28,4 @@
     <%= f.submit 'Send message', class: "btn btn-primary" %>
   </div>
 <% end %>
-</div>
+  </div>  
