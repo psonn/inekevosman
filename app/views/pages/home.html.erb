@@ -1,22 +1,23 @@
 <% provide(:title, 'Home') %>
 
 <div class="jumbotron center">
-    <% if user_signed_in? %>
-  <p>
-    <%= back_to homes_path %>
-  </p>
-<% end %><br />
+
 
 <% if @homes.title? %>
   <h1><%= @homes.title %></h1>
 <% else %>
   <h1>Welkom op Ineke Vosman.nl!</h1>
-<% end %>
+<% end %><br>
 
 <% if @homes.body? %>
   <p><%= (@homes.body).html_safe %></p>
 <% else %>
   <p>Welkom op Ineke Vosman.nl!</p>
 <% end %>
-
+    <% if user_signed_in? %>
+    <br>
+  <p>
+    <%= back_to homes_path %>
+  </p>
+<% end %>
 </div>
