@@ -1,0 +1,22 @@
+<% provide(:title, @overzicht.title) %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <h1><%= wrap(@overzicht.title) %></h1>
+    </div>
+  </div>
+  <div class="panel-body">
+
+	<p>Geplaatst op <%= @overzicht.created_at.strftime("%d/%m/%Y") %> om <%= @overzicht.created_at.strftime("%H:%M") %></p>
+
+	<p>
+	  <%= (@overzicht.body).html_safe %>
+	</p>
+
+  </div>  
+  <div class="panel-footer">
+  	<%= link_to 'Edit', edit_overzicht_path(@overzicht) %> |
+  	<%= link_to 'Back', overzichts_path %>
+  </div>
+</div>

@@ -1,12 +1,22 @@
 <% provide(:title, 'Artikelen') %>
 
 <div class="jumbotron center">
-	<h1>
-		Our work
-	</h1>
-	<p>
-		Below, you will find a selection of our work. For more information, click on the link to visit the dedicated page. Once you're there, feel free to let us know what you think by placing a comment. Alternatively, send us a message through the <%= link_to 'contact form', contact_path %>.
-	</p>
+  <% if @overzichts.title? %>
+    <h1><%= @overzichts.title %></h1>
+  <% else %>
+    <h1>Our work</h1>
+  <% end %>
+  <% if @overzichts.body? %>
+    <p><%= (@overzichts.body).html_safe %></p>
+  <% else %>
+    <p>Below, you will find a selection of our work. For more information, click on the link to visit the dedicated page. Once you're there, feel free to let us know what you think by placing a comment. Alternatively, send us a message through the <%= link_to 'contact form', contact_path %>.</p>
+  <% end %>
+  <% if user_signed_in? %>
+    <br>
+    <p>
+      <%= back_to overzichts_path %>
+    </p>
+  <% end %>
 </div>
     <%= render 'article' %>
 

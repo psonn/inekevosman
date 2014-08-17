@@ -1,4 +1,6 @@
 Ineke5::Application.routes.draw do
+  resources :overzichts
+
   resources :contactpaginas
 
   resources :homes
