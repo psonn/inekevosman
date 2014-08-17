@@ -15,7 +15,7 @@
 	<p>Geplaatst door <strong><%= @article.user.username if @article.user %></strong> op <%= @article.created_at.strftime("%d/%m/%Y") %> om <%= @article.created_at.strftime("%H:%M") %></p>
 
 	<p>
-	  <%= wrap((@article.body).html_safe) %>
+	  <%= (@article.body).html_safe %>
 	</p>
 
   </div>  
