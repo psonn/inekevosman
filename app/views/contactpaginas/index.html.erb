@@ -1,0 +1,27 @@
+<h1>Listing contactpaginas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contactpaginas.each do |contactpagina| %>
+      <tr>
+        <td><%= contactpagina.title %></td>
+        <td><%= contactpagina.body %></td>
+        <td><%= link_to 'Show', contactpagina %></td>
+        <td><%= link_to 'Edit', edit_contactpagina_path(contactpagina) %></td>
+        <td><%= link_to 'Destroy', contactpagina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contactpagina', new_contactpagina_path %>

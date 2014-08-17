@@ -12,7 +12,7 @@
 	<%= image_tag @article.image_url(:medium).to_s, class: "img-responsive" %>
 	</p>
 
-	<p>Door <strong><%= @article.user.username if @article.user %></strong>, <%=  %></p>
+	<p>Geplaatst door <strong><%= @article.user.username if @article.user %></strong> op <%= @article.created_at.strftime("%d/%m/%Y") %> om <%= @article.created_at.strftime("%H:%M") %></p>
 
 	<p>
 	  <%= wrap((@article.body).html_safe) %>

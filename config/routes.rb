@@ -1,4 +1,8 @@
 Ineke5::Application.routes.draw do
+  resources :contactpaginas
+
+  resources :homes
+
   get 'work/index'
 
   get 'contacts/new'
